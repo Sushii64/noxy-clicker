@@ -1,0 +1,12 @@
+{
+ "Name": "Noxy Clicker",
+ "ID": "noxynoxycordcord",
+ "Author": "Cali",
+ "Description": "Mod for cookie clicker to celebrate noxys birthday. umm credits to mv and EVERYONE in noxycord including people who left since a bunch of stuff would not be here if not for them",
+ "ModVersion": 1.0,
+ "GameVersion": 2.053,
+ "Date": "9/26/2026",
+ "Dependencies": ["CCSE"],
+ "Disabled": 1,
+ "AllowSteamAchievs": 1
+}
