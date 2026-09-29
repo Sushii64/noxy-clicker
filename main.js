@@ -1,36 +1,36 @@
 Game.registerMod("noxynoxycordcord",{
 	init:function(){
-		let modDirectory = this.dir;
+		const MOD_DIR = this.dir;
 		// list of cursors
 		// like the ones that click the cookie not your cursor
-		const cursors = [
-			modDirectory + '/img/cursor1.png',
-			modDirectory + '/img/cursor2.png',
-			modDirectory + '/img/cursor3.png',
-			modDirectory + '/img/cursor4.png',
-			modDirectory + '/img/cursor5.png',
-			modDirectory + '/img/cursor6.png',
-			modDirectory + '/img/cursor7.png',
-			modDirectory + '/img/cursor8.png',
-			modDirectory + '/img/cursor9.png',
-			modDirectory + '/img/cursor10.png',
-			modDirectory + '/img/cursor11.png',
-			modDirectory + '/img/cursor12.png',
-			modDirectory + '/img/cursor13.png',
-			modDirectory + '/img/cursor14.png',
-			modDirectory + '/img/cursor15.png',
-			modDirectory + '/img/cursor16.png',
-			modDirectory + '/img/cursor17.png',
-			modDirectory + '/img/cursor18.png',
-			modDirectory + '/img/cursor19.png',
-			modDirectory + '/img/cursor20.png'
+		const CURSORS = [
+			MOD_DIR + '/img/cursor1.png',
+			MOD_DIR + '/img/cursor2.png',
+			MOD_DIR + '/img/cursor3.png',
+			MOD_DIR + '/img/cursor4.png',
+			MOD_DIR + '/img/cursor5.png',
+			MOD_DIR + '/img/cursor6.png',
+			MOD_DIR + '/img/cursor7.png',
+			MOD_DIR + '/img/cursor8.png',
+			MOD_DIR + '/img/cursor9.png',
+			MOD_DIR + '/img/cursor10.png',
+			MOD_DIR + '/img/cursor11.png',
+			MOD_DIR + '/img/cursor12.png',
+			MOD_DIR + '/img/cursor13.png',
+			MOD_DIR + '/img/cursor14.png',
+			MOD_DIR + '/img/cursor15.png',
+			MOD_DIR + '/img/cursor16.png',
+			MOD_DIR + '/img/cursor17.png',
+			MOD_DIR + '/img/cursor18.png',
+			MOD_DIR + '/img/cursor19.png',
+			MOD_DIR + '/img/cursor20.png'
 
 		];
 		// pick a random cursor from the list
 		function randomCursor() {
 			Game.Loader.Replace(
 				'cursor.png',
-				cursors[Math.floor(Math.random() * cursors.length)]
+				CURSORS[Math.floor(Math.random() * CURSORS.length)]
 			);
 
 			Game.RefreshStore();
@@ -52,49 +52,13 @@ Game.registerMod("noxynoxycordcord",{
 		});
 
 		// set up all shop icons
-		// there is a better way to do this but i'll do it another time --jade
-		l("productIcon0").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIcon1").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIcon2").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIcon3").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIcon4").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIcon5").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIcon6").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIcon7").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIcon8").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIcon9").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIcon10").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIcon11").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIcon12").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIcon13").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIcon14").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIcon15").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIcon16").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIcon17").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIcon18").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIcon19").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
 
-		// ditto, but for locked icons
-		l("productIconOff0").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIconOff1").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIconOff2").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIconOff3").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIconOff4").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIconOff5").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIconOff6").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIconOff7").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIconOff8").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIconOff9").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIconOff10").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIconOff11").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIconOff12").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIconOff13").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIconOff14").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIconOff15").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIconOff16").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIconOff17").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIconOff18").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
-		l("productIconOff19").style = `background: url('${modDirectory + "/img/shop_icons.png"}')`;
+		const SHOP_ICON_COUNT = 19;
+
+		for (let i = 0; i <= 19; i++) {
+			l(`productIcon${i}`).style = `background: url('${MOD_DIR + "/img/shop_icons.png"}')`;
+			l(`productIconOff${i}`).style = `background: url('${MOD_DIR + "/img/shop_icons.png"}')`; // locked icons
+		}
 
 		// set up building names
 		Game.ObjectsById[0].displayName = "Noxycord";
@@ -120,65 +84,75 @@ Game.registerMod("noxynoxycordcord",{
 		Game.RefreshStore(); // refresh the names
 
 		// change building pictures
-		Game.Loader.Replace('grandma.png',modDirectory + '/img/noxydefault.png');
-		Game.Loader.Replace('alteredGrandma.png',modDirectory + '/img/yesxy.png');
-		Game.Loader.Replace('alternateGrandma.png',modDirectory + '/img/noxyalt.png');
-		Game.Loader.Replace('antiGrandma.png',modDirectory + '/img/antinoxy.png');
-		Game.Loader.Replace('bankGrandma.png',modDirectory + '/img/noxybanker.png');
-		Game.Loader.Replace('brainyGrandma.png',modDirectory + '/img/noxybrain.png');
-		Game.Loader.Replace('bunnyGrandma.png',modDirectory + '/img/whenxy.png');
-		Game.Loader.Replace('cloneGrandma.png',modDirectory + '/img/testtubexy.png');
-		Game.Loader.Replace('cosmicGrandma.png',modDirectory + '/img/noxycosmic.png');
-		Game.Loader.Replace('elfGrandma.png',modDirectory + '/img/christmasnoxy.png');
-		Game.Loader.Replace('farmerGrandma.png',modDirectory + '/img/noxyfarmer.png');
-		Game.Loader.Replace('grandmasGrandma.png',modDirectory + '/img/noxynoxy.png');
-		Game.Loader.Replace('luckyGrandma.png',modDirectory + '/img/noxyluck.png');
-		Game.Loader.Replace('metaGrandma.png',modDirectory + '/img/metanoxy.png');
-		Game.Loader.Replace('minerGrandma.png',modDirectory + '/img/noxyminer.png');
-		Game.Loader.Replace('rainbowGrandma.png',modDirectory + '/img/tricksternoxy.png');
-		Game.Loader.Replace('scriptGrandma.png',modDirectory + '/img/noxyscripter.png');
-		Game.Loader.Replace('templeGrandma.png',modDirectory + '/img/noxypriestress.png');
-		Game.Loader.Replace('transmutedGrandma.png',modDirectory + '/img/noxytransmutated.png');
-		Game.Loader.Replace('witchGrandma.png',modDirectory + '/img/noxywitch.png');
-		Game.Loader.Replace('workerGrandma.png',modDirectory + '/img/noxyworker.png');
-		Game.Loader.Replace('perfectCookie.png',modDirectory + '/img/cookie.png');
-		Game.Loader.Replace('cookieShadow.png',modDirectory + '/img/cookieShadow.png');
-		Game.Loader.Replace('farm.png',modDirectory + '/img/farm.png');
-		Game.Loader.Replace('mine.png',modDirectory + '/img/mine.png');
-		Game.Loader.Replace('factory.png',modDirectory + '/img/factory.png');
-		Game.Loader.Replace('bank.png',modDirectory + '/img/bank.png');
-		Game.Loader.Replace('temple.png',modDirectory + '/img/temple.png');
-		Game.Loader.Replace('shipment.png',modDirectory + '/img/shipment.png');
-		Game.Loader.Replace('wizardtower.png',modDirectory + '/img/wizardtower.png');
-		Game.Loader.Replace('alchemylab.png',modDirectory + '/img/alchemylab.png');
-		Game.Loader.Replace('portal.png',modDirectory + '/img/portal.png');
-		Game.Loader.Replace('portalBackground.png',modDirectory + '/img/portalBackground.png');
-		Game.Loader.Replace('farmBackground.png',modDirectory + '/img/farmBackground.png');
-		Game.Loader.Replace('grandmaBackground.png',modDirectory + '/img/grandmaBackground.png');
-		Game.Loader.Replace('mineBackground.png',modDirectory + '/img/mineBackground.png');
-		Game.Loader.Replace('imperfectCookie.png',modDirectory + '/img/imperfectCookie.png');
-		Game.Loader.Replace('timemachine.png',modDirectory + '/img/timemachine.png');
-		Game.Loader.Replace('timemachineBackground.png',modDirectory + '/img/timemachineBackground.png');
-		Game.Loader.Replace('antimattercondenser.png',modDirectory + '/img/antimattercondenser.png');
-		Game.Loader.Replace('antimattercondenserBackground.png',modDirectory + '/img/antimattercondenserBackground.png');
-		Game.Loader.Replace('prism.png',modDirectory + '/img/prism.png');
-		Game.Loader.Replace('prismBackground.png',modDirectory + '/img/prismBackground.png');
-		Game.Loader.Replace('chancemaker.png',modDirectory + '/img/chancemaker.png');
-		Game.Loader.Replace('chancemakerBackground.png',modDirectory + '/img/chancemakerBackground.png');
-		Game.Loader.Replace('fractalEngine.png',modDirectory + '/img/fractalengine.png');
-		Game.Loader.Replace('fractalEngineBackground.png',modDirectory + '/img/fractalengineBackground.png');
-		Game.Loader.Replace('javascriptconsole.png',modDirectory + '/img/javascriptconsole.png');
-		Game.Loader.Replace('javascriptconsoleBackground.png',modDirectory + '/img/javascriptconsoleBackground.png');
-		Game.Loader.Replace('idleverse.png',modDirectory + '/img/idleverse.png');
-		Game.Loader.Replace('cortex.png',modDirectory + '/img/cortex.png');
-		Game.Loader.Replace('grandmas1.jpg',modDirectory + '/img/grandmas1.png');
-		Game.Loader.Replace('grandmas2.jpg',modDirectory + '/img/grandmas2.png');
-		Game.Loader.Replace('grandmas3.jpg',modDirectory + '/img/grandmas3.png');
-		Game.Loader.Replace('wrinkler.png',modDirectory + '/img/wrinkler.png');
-		Game.Loader.Replace('wrinkler.png',modDirectory + '/img/wrinkler.png');
-		Game.Loader.Replace('winterWinkler.png',modDirectory + '/img/winterWinkler.png');
-		Game.Loader.Replace('winterWrinkler.png',modDirectory + '/img/winterWrinkler.png');
 
+		let replace = { // this list just makes it easier to add files
+			// the first thing is the original filename, and the second is the filename of the file within the mod directory
+			'grandma': 'noxydefault',
+			'alteredGrandma': 'yesxy',
+			'alternateGrandma': 'noxyalt',
+			'antiGrandma': 'antinoxy',
+			'bankGrandma': 'noxybanker',
+			'brainyGrandma': 'noxybrain',
+			'bunnyGrandma': 'whenxy',
+			'cloneGrandma': 'testtubexy',
+			'cosmicGrandma': 'noxycosmic',
+			'elfGrandma': 'christmasnoxy',
+			'farmerGrandma': 'noxyfarmer',
+			'grandmasGrandma': 'noxynoxy',
+			'luckyGrandma': 'noxyluck',
+			'metaGrandma': 'metanoxy',
+			'minerGrandma': 'noxyminer',
+			'rainbowGrandma': 'tricksternoxy',
+			'scriptGrandma': 'noxyscripter',
+			'templeGrandma': 'noxypriestress',
+			'transmutedGrandma': 'noxytransmutated',
+			'witchGrandma': 'noxywitch',
+			'workerGrandma': 'noxyworker',
+			'perfectCookie': 'cookie',
+			'cookieShadow': 'cookieShadow',
+			'farm': 'farm',
+			'mine': 'mine',
+			'factory': 'factory',
+			'bank': 'bank',
+			'temple': 'temple',
+			'shipment': 'shipment',
+			'wizardtower': 'wizardtower',
+			'alchemylab': 'alchemylab',
+			'portal': 'portal',
+			'portalBackground': 'portalBackground',
+			'farmBackground': 'farmBackground',
+			'grandmaBackground': 'grandmaBackground',
+			'mineBackground': 'mineBackground',
+			'bankBackground': 'bankBackground',
+			'templeBackground': 'templeBackground',
+			'wizardtowerBackground': 'wizardtowerBackground',
+			'imperfectCookie': 'imperfectCookie',
+			'timemachine': 'timemachine',
+			'timemachineBackground': 'timemachineBackground',
+			'antimattercondenser': 'antimattercondenser',
+			'antimattercondenserBackground': 'antimattercondenserBackground',
+			'prism': 'prism',
+			'prismBackground': 'prismBackground',
+			'chancemaker': 'chancemaker',
+			'chancemakerBackground': 'chancemakerBackground',
+			'fractalEngine': 'fractalengine',
+			'fractalEngineBackground': 'fractalengineBackground',
+			'javascriptconsole': 'javascriptconsole',
+			'javascriptconsoleBackground': 'javascriptconsoleBackground',
+			'idleverse': 'idleverse',
+			'cortex': 'cortex',
+			'grandmas1': 'grandmas1',
+			'grandmas2': 'grandmas2',
+			'grandmas3': 'grandmas3',
+			'wrinkler': 'wrinkler',
+			'winterWinkler': 'winterWinkler',
+			'winterWrinkler': 'winterWrinkler'
+		};
+
+
+		for (path in replace) {
+			Game.Loader.Replace(`${path}.png`,`${MOD_DIR}/img/${replace[path]}.png`);
+		}
 
 		// hook into the golden init function and replace its picture
 		let oldInitFunc = Game.shimmerTypes['golden'].initFunc;
@@ -186,29 +160,25 @@ Game.registerMod("noxynoxycordcord",{
 		Game.shimmerTypes['golden'].initFunc = function(me) {
 			oldInitFunc.call(this, me);
 
-			me.l.style.backgroundImage = `url('${modDirectory + "/img/goldencookie.png"}')`;
+			me.l.style.backgroundImage = `url('${MOD_DIR + "/img/goldencookie.png"}')`;
 		};
 
 		// change grandma names and some more pictures
 		Game.grandmaNames = [
 			'Wherexy', 'Howxy' , 'Whoxy', 'Whenxy', 'Noxy', 'Whatxy'
 		];
-		Game.Loader.Replace('bankBackground.png',modDirectory + '/img/bankBackground.png');
-		Game.Loader.Replace('templeBackground.png',modDirectory + '/img/templeBackground.png');
-		Game.Loader.Replace('wizardtowerBackground.png',modDirectory + '/img/wizardtowerBackground.png');
-
 
 		// change upgrade icons
-		Game.Upgrades['Reinforced index finger'].icon = [0,0, modDirectory + '/img/icons.png'];
+		Game.Upgrades['Reinforced index finger'].icon = [0,0, MOD_DIR + '/img/icons.png'];
 
-		Game.Upgrades['Forwards from grandma'].icon = [1,0, modDirectory + '/img/icons.png'];
+		Game.Upgrades['Forwards from grandma'].icon = [1,0, MOD_DIR + '/img/icons.png'];
 
-		Game.Upgrades['Cheap hoes'].icon = [2,0, modDirectory + '/img/icons.png'];
+		Game.Upgrades['Cheap hoes'].icon = [2,0, MOD_DIR + '/img/icons.png'];
 
-		Game.Upgrades['Sugar gas'].icon = [3,0, modDirectory + '/img/icons.png'];
+		Game.Upgrades['Sugar gas'].icon = [3,0, MOD_DIR + '/img/icons.png'];
 
-		Game.Upgrades['Sturdier conveyor belts'].icon = [4,0, modDirectory + '/img/icons.png'];
+		Game.Upgrades['Sturdier conveyor belts'].icon = [4,0, MOD_DIR + '/img/icons.png'];
 
-		Game.Upgrades['Vanilla nebulae'].icon = [5,0, modDirectory + '/img/icons.png'];
+		Game.Upgrades['Vanilla nebulae'].icon = [5,0, MOD_DIR + '/img/icons.png'];
 	}
 });
